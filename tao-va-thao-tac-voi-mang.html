@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="text">
+    <input type="button" value="Add" onclick="addArray()">
+    <input type="button" value="Display" onclick="displayArray()">
+    <p id="result"></p>
+
+    <script>
+
+
+        let myArray = [];
+        let x = 0;
+        function addArray() {
+            myArray[x] = document.getElementById("input").value;
+            x++;
+            document.getElementById("input").value = "";
+        }
+
+        function displayArray() {
+            let c = "";
+            for (let i = 0; i < myArray.length; i++) {
+                c += "Element " + i + " = " + myArray[i] + "</br>";
+             }
+            document.getElementById("result").innerHTML = c;
+        }
+
+
+
+    </script>
+
+
+</body>
+</html>
