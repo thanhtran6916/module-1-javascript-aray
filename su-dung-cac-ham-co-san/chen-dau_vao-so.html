@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      let inputNumber = prompt("mời bạn nhập số")
+      let numberArray = inputNumber.split("");
+      let result = [numberArray[0]];
+      for (let i = 1; i < numberArray.length; i++) {
+        if (numberArray[i] % 2 == 0 && numberArray[i - 1] % 2 == 0) {
+          result.push("-");
+          result.push(numberArray[i]);
+        } else {
+          result.push(numberArray[i])
+        }
+      }
+      document.write(result.join(""))
+
+
+    </script>
+</body>
+</html>

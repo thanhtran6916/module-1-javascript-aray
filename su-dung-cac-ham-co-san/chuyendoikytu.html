@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      let init = prompt("Mời bạn nhập chữ");
+      let myArray = init.split("");
+      let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+      let result = [];
+      let flag = false;
+      for (let i = 0; i < myArray.length; i++) {
+        for (let j = 0; j < UPPER.length; j++) {
+          if (myArray[i] == UPPER[j]) {
+            result.push(LOWER[j]);
+            flag = true;
+            break;
+          } else if (myArray[i] == LOWER[j]) {
+            result.push(UPPER[j]);
+            flag = true;
+            break;
+          }
+        }
+        if (flag == true) {
+          flag = false;
+        } else {
+          result.push(myArray[i]);
+        }
+      }
+      document.write(result.join(""));
+
+    </script>
+</body>
+</html>
