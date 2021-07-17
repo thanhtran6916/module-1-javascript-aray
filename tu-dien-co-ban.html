@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển cơ bản</title>
+</head>
+<body>
+    <script>
+        let english = [
+            "translate",
+            "fast",
+            "and",
+            "infinity",
+            "war"
+        ];
+        let vietnamese = [
+            "dịch",
+            "nhanh",
+            "và",
+            "vô cực",
+            "cuộc chiến"
+        ];
+        let inputEng = prompt("nhập vào từ bạn muốn dịch");
+        let engs = inputEng.split(" ")
+        let result = [];
+        let flag = false;
+        for (let i = 0; i < engs.length; i++) {
+            for (let j = 0; j < english.length; j++) {
+                if (english[j] == engs[i]) {
+                    result.push(vietnamese[j]);
+                    flag = true;
+                }
+            }
+        }
+        if (flag == true) {
+            document.write(result.join(' '));
+            result = []
+        } else {
+            document.write("Không tìm thấy!")
+        }
+    </script>
+</body>
+</html>
