@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Type anthing slowly</h2>
+    <form name="f">
+      <textarea id="inputText" name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
+    </form>
+
+    <script>
+      let text = "Tôi là một thằng ngốc!!";
+      let myArray = text.split("")
+      let data = "";
+
+      let i = 0;
+      function typeTextarea() {
+          data += myArray[i];
+          i++;
+          if (i == myArray.length) {
+              i = 0;
+              data = "";
+          }
+          document.getElementById("inputText").value = data;
+      }
+
+
+
+    </script>
+</body>
+</html>
