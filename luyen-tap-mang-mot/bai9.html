@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let a = [];
+  for (let i = 0; i < 10; i++) {
+    a[i] = i;
+  }
+
+  let b = [];
+  for (let j = 10; j < 20; j++) {
+    b[j -10] = j;
+  }
+
+  let c = [];
+  for (let x = 0; x < 20; x++) {
+    c[x] = x + 20;
+  }
+
+  let e = [];
+  let eCount = 0;
+  let y = 0
+  for (let z = 0; z < a.length; z++) {
+    e[eCount] = a[z];
+    eCount++;
+  }
+  z = 0;
+  for (let z = 0; z < b.length; z++) {
+    e[eCount] = b[z];
+    eCount++;
+  }
+  z = 0;
+  for (let z = 0; z < c.length; z++) {
+    e[eCount] = c[z];
+    eCount++;
+  }
+  c = e;
+  document.write(c)
+</script>
+</body>
+</html>

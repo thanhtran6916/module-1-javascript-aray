@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myArray = [-3,4,5,-5,2,-1,-4];
+        let b = myArray.length - 1;
+        let c;
+        for (let i = 0; i < b; i++, b--) {
+            c = myArray[i];
+            myArray[i] = myArray[b];
+            myArray[b] = c;
+        }
+        console.log(myArray)
+    </script>
+</body>
+</html>

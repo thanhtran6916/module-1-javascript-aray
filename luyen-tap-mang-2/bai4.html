@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      let myString = prompt("Nhập vào một dòng");
+      let myArray = myString.split(" ");
+      let data = ""
+      for (let i = 0; i < myArray.length; i++) {
+        data += "\"" + myArray[i] + "\"" + " có vị trí " + [i] + "</br>";
+      }
+      document.write(data);
+    </script>
+</body>
+</html>

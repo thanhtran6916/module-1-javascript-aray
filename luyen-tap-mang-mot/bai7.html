@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      let myArray = [1,2,3,4,5,2,6,7,8,9];
+      let v = 2;
+      let myNewArray = [];
+      let myNewArrayCount = 0;
+      for (let i = 0; i < myArray.length; i++) {
+        if (v == myArray[i]) {
+          continue;
+        }
+        myNewArray[myNewArrayCount] = myArray[i];
+        myNewArrayCount++
+      }
+      myNewArray[myNewArray.length] = 0;
+      console.log(myNewArray);
+    </script>
+</body>
+</html>

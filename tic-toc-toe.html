@@ -1,10 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tic tac toe</title>
 </head>
 <body>
-$END$
+    <p style="font-size: 30px; font-family: Tahoma; margin: 20px">Cờ Caro</p>
+    <p id="result"></p>
+    <button type="button" onclick="changeCaro()">Play</button>
+    <script>
+      let myArray = []
+      let data = "";
+      let flag = true;
+      let leng = 3;
+      //khai báo và hiển thị bảng
+      for (let i = 0; i < 10; i++) {
+        myArray[i] = [".", ".", "."];
+      }
+      for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+          data += myArray[i][j] + "&nbsp;&nbsp;&nbsp;"
+        }
+        data += "</br>"
+      }
+      document.getElementById("result").innerHTML = data;
+      //sử dụng nut để thay đổi vị trí của mảng
+      function changeCaro() {
+        let data = "";
+        if (flag == true) {
+          let inputX = parseInt(prompt("Player 1: Nhập giá trị X"));
+          let inputY = parseInt(prompt("Player 1: Nhập giá trị Y"));
+          myArray[inputY - 1][inputX - 1] = "x";
+          for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+              data += myArray[i][j] + "&nbsp;&nbsp;&nbsp;"
+            }
+            data += "</br>"
+          }
+          document.getElementById("result").innerHTML = data;
+          flag = true
+        } else {
+          let inputX = parseInt(prompt("Player 2: Nhập giá trị X"));
+          let inputY = parseInt(prompt("Player 2: Nhập giá trị Y"));
+          myArray[inputY - 1][inputX - 1] = "o";
+          for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+              data += myArray[i][j] + "&nbsp;&nbsp;&nbsp;"
+            }
+            data += "</br>"
+          }
+          document.getElementById("result").innerHTML = data;
+          flag = true
+        }
+
+        //thông báo thắng cuộc
+        for (let i = 0; i < 3; i++) {
+          for (let j = 0; j < 3; j++) {
+            console.log(leng)
+            if (myArray[i][j] == "x") {
+              if (myArray[i][j] == myArray[i][j + 1] && myArray[i][j] == myArray[i][j + 2]){
+                console.log("thắng cuộc")
+              } else if (myArray[i][j] == myArray[i + 1][j] && myArray[i][j] == myArray[i + 2][j]){
+                console.log("thắng cuộc")
+              } else if (myArray[i][j] == myArray[i + 1][j + 1] && myArray[i][j] == myArray[i + 2][j + 2]){
+                console.log("thắng cuộc")
+              }
+              // else if (myArray[3 - i][3 - j] == myArray[3 - i - 1][3 - j + 1] && myArray[3 - i][3 - j] == myArray[3 - i - 2][3 - j + 2]){
+              //   console.log("thắng cuộc")
+              // }
+            }
+          }
+        }
+      }
+    </script>
 </body>
 </html>

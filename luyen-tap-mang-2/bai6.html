@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      let myString = prompt("Nhập vào một dòng");
+      let myArray = myString.split("");
+      for (let i = 0; i < myArray.length; i++) {
+        if (myArray[i] == "-") {
+          myArray[i] = "_";
+        }
+      }
+      document.write(myArray.join(""));
+    </script>
+</body>
+</html>

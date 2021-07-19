@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let myArray = [1,2,3,4,5,6,7,8,9,0];
+        let flag = false;
+        let v = parseInt(prompt("Nhập vào một số"))
+        let isInTheArray = []
+        for (let i = 0; i < myArray.length; i++) {
+          if (myArray[i] == v) {
+            flag = true
+            isInTheArray.push([i + 1]);
+          }
+        }
+        if (flag == true) {
+          document.write('số v nằm trong mảng ở vị trí ' + isInTheArray)
+
+        } else {
+          document.write('số v không nằm trong mảng')
+        }
+    </script>
+</body>
+</html>

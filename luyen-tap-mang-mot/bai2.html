@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập vào các số nguyên cách nhau bởi dấu ","</p>
+<input id="input" type="text">
+<button type="button" onclick="calculate()">Tính toán</button>
+<p id="result"></p>
+<script>
+    function calculate() {
+        let input = document.getElementById("input").value;
+        let myArray = input.split(",");
+        let max = parseInt(myArray[0]);
+        let i = 0;
+        let j = 0;
+        for (i; i < myArray.length; i++) {
+            if (parseInt(myArray[i]) > max) {
+                max = parseInt(myArray[i]);
+            }
+        }
+        for (j ; j < myArray.length; j++) {
+            if (max == myArray[j]) {
+                break;
+            }
+        }
+        document.getElementById("result").innerHTML = "Số " + max + " là số lớn nhất ở vị trí số " + (j + 1);
+    }
+
+
+</script>
+</body>
+</html>
